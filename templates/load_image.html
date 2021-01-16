@@ -1,0 +1,20 @@
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+<div class="container">
+{% for image in images %}
+    <img src="/{{ image.image }}" alt="Image">
+{% endfor %}
+
+<form method="post" enctype="multipart/form-data">
+  <div class="form-group">
+      {% csrf_token %}
+      {{ form.image.label }}<br>
+      {{ form.image }}<br>
+      {{ form.errors }}
+      <input type="submit" value="Load" class="btn btn-sm btn-outline-secondary">
+      <a href="/" class="btn btn-sm btn-outline-secondary">Back</a>
+  </div>
+</form>
+</div>
+{% endblock %}

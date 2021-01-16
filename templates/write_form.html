@@ -1,0 +1,26 @@
+{% extends "main.html" %}
+{% load static %}
+{% block content %}
+    <div class="container">
+    <form action="" method="post" >
+
+
+    {% csrf_token %}
+        <div class="form-group">
+
+                <div class="form-group">
+                    {{ form.head.label }}
+                    {{ form.head }}<br>
+                </div>
+                <div class="form-group">
+                    {{ form.text.label }}
+                    {{ form.text }}<br>
+                </div>
+        <input type="submit" value="Create" class="btn btn-sm btn-outline-secondary">
+        </div>
+
+
+    </form>
+    </div>
+
+{% endblock %}
