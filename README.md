@@ -13,8 +13,9 @@ It uses python3.9, Django 3.1.5, PostgreSQL and requires Docker.
 
 The main docker-compose file has all the services to run at development.
 
-Run using command:
+Run using commands:
 ```bash
+docker-compose run web python manage.py migrate
 docker-compose up
 ```
 
